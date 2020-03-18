@@ -5,7 +5,7 @@ Tiny douyu websocket library (< 5kb) in browser environment.
 ## Usage
 
 ```javascript
-<script src="../dist/dyws.min.js"></script>
+<script src="https://unpkg.com/dyws/dist/dyws.min.js"></script>
 
 <script>
 var roomId = '288016';
