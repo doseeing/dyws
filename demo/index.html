@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dyws demo</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <p>
+      usage: 
+      <ul>
+          <li>
+            click start
+          </li>
+          <li>
+            check console.log for output
+          </li>
+          <li>
+            click stop
+          </li>
+      </ul>
+
+      
+    </p>
+    <button id="douyu-start">douyu websocket start</button>
+    <button id="douyu-stop">douyu websocket stop</button>
+    <script src="../dist/dyws.min.js"></script>
+    <script>
+      var ws = null;
+      document
+        .getElementById('douyu-start')
+        .addEventListener('click', function() {
+          ws = dyws.createDYWebsocket('288016', {
+            onMessage: function(msg) {
+              console.log(msg);
+            },
+          });
+        });
+      document
+        .getElementById('douyu-stop')
+        .addEventListener('click', function() {
+          if (ws !== null) {
+            ws.close();
+          }
+        });
+    </script>
+  </body>
+</html>

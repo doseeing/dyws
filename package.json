@@ -1,0 +1,36 @@
+{
+  "name": "dyws",
+  "version": "1.0.0",
+  "description": "douyu websocket for browser",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn build:dev && yarn build:prod",
+    "build:dev": "webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "test": "jest"
+  },
+  "keywords": [
+    "douyu",
+    "websocket"
+  ],
+  "author": "doseeing",
+  "license": "MIT",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "roots": [
+      "src/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.2",
+    "jest": "^25.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}
