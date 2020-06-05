@@ -27,6 +27,7 @@
     "babel-loader": "^8.0.6",
     "cross-env": "^7.0.2",
     "jest": "^25.1.0",
+    "text-decoding": "^1.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
